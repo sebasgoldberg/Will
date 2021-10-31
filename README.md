@@ -31,10 +31,10 @@ The contract will be an [Ownable](https://docs.openzeppelin.com/contracts/4.x/ac
 ### Operations
 #### Owner Operations
 - `addBeneficiary(address beneficiary, uint8 priority)` (if `beneficiary` exists, then change its priority)
-- `removeBeneficiary(address beneficiary)` (if `mainBeneficiary` == `beneficiary`, then first call to `goToInicialStage()`)
+- `removeBeneficiary(address beneficiary)` (if `mainBeneficiary` == `beneficiary`, then first call to `goToInitialStage()`)
 - `setTimeLockAmount(uint256 amount)`
 - `setForwardTimeAmount(uint256 amount)`
-- `goToInicialStage()`
+- `goToInitialStage()`
 - `lock()`
 - `unlock()`
 
@@ -67,7 +67,7 @@ The contract will be an [Ownable](https://docs.openzeppelin.com/contracts/4.x/ac
 	- Result
 		- Calls `doExecute`
 		- Sets `mainBeneficiary` as the contract's `owner`
-		- Calls `goToInicialStage()`
+		- Calls `goToInitialStage()`
 		- Calls `removeBeneficiary(mainBeneficiary)`
 
 #### Execution
