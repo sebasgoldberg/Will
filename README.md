@@ -21,7 +21,6 @@ The contract will be an [Ownable](https://docs.openzeppelin.com/contracts/4.x/ac
  - `beneficiaries` with their corresponding priority ({address, uint8}[]).
  - `timeLockAmountOfTime` after will activation (uint256).
  - `forwardAmountOfTime` (uint256)
- - `executed` (bool)
 
 ### Status
 - `mainBeneficiary` (address)
@@ -62,7 +61,7 @@ The contract will be an [Ownable](https://docs.openzeppelin.com/contracts/4.x/ac
 
 - `execute()` 
 	- Requires
-		- Contract is in `execution stage` (time-lock released and `not executed`)
+		- Contract is in `execution stage` (time-lock released)
 		- `sender == mainBeneficiary`
 		- `not locked`
 	- Result
